@@ -32,7 +32,6 @@ window.onload = function () {
         // }
 
         for (var i = length - 1; i >= 0; i--) {
-            //This will create a horizontal snake starting from the top left
             snakeArray.push({ x: i, y: 0 });
         }
     }
@@ -60,9 +59,7 @@ window.onload = function () {
         else if (direction == "down") ny++;
 
         if (nx == -1 || nx == w / cellWidth || ny == -1 || ny == h / cellWidth || snakeCollided(nx, ny, snakeArray)) {
-            //restart game
             init();
-            //Lets organize the code a bit now.
             return;
         }
 
